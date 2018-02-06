@@ -9,19 +9,36 @@
 /* Begin PBXBuildFile section */
 		3D1F8FF91FF21F5700930AAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1F8FF81FF21F5700930AAD /* AppDelegate.m */; };
 		3D1F8FFB1FF21F5700930AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1F8FFA1FF21F5700930AAD /* Assets.xcassets */; };
-		3D1F8FFE1FF21F5700930AAD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1F8FFC1FF21F5700930AAD /* MainMenu.xib */; };
 		3D1F90011FF21F5700930AAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1F90001FF21F5700930AAD /* main.m */; };
+		3D977D27202403E00001E0BF /* DisplayArrangementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D977D26202403E00001E0BF /* DisplayArrangementView.m */; };
+		3DF1572720216CFB0086BD82 /* StatusBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1572620216CFB0086BD82 /* StatusBarController.m */; };
+		3DF1572F2021BAAF0086BD82 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1572E2021BAAF0086BD82 /* PreferenceController.m */; };
+		3DF157312021C2940086BD82 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF157302021C2940086BD82 /* Preferences.xib */; };
+		3DF157342021EB420086BD82 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF157332021EB420086BD82 /* CoreGraphics.framework */; };
+		3DF157372021EF9B0086BD82 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF157352021EF9B0086BD82 /* MainMenu.xib */; };
+		A69EAEA0352D284FA525F004 /* Pods_Movse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790BB692F73DC3C0C58C7A94 /* Pods_Movse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B5E48DB78E3BE99523F0A37 /* Pods-Movse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movse/Pods-Movse.debug.xcconfig"; sourceTree = "<group>"; };
 		3D1F8FF41FF21F5700930AAD /* Movse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1F8FF71FF21F5700930AAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3D1F8FF81FF21F5700930AAD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3D1F8FFA1FF21F5700930AAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3D1F8FFD1FF21F5700930AAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3D1F8FFF1FF21F5700930AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D1F90001FF21F5700930AAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D1F90021FF21F5700930AAD /* Movse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Movse.entitlements; sourceTree = "<group>"; };
+		3D977D25202403E00001E0BF /* DisplayArrangementView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayArrangementView.h; sourceTree = "<group>"; };
+		3D977D26202403E00001E0BF /* DisplayArrangementView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayArrangementView.m; sourceTree = "<group>"; };
+		3DF1572520216CFB0086BD82 /* StatusBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusBarController.h; sourceTree = "<group>"; };
+		3DF1572620216CFB0086BD82 /* StatusBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusBarController.m; sourceTree = "<group>"; };
+		3DF1572D2021BAAF0086BD82 /* PreferenceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
+		3DF1572E2021BAAF0086BD82 /* PreferenceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
+		3DF157302021C2940086BD82 /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		3DF157332021EB420086BD82 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3DF157362021EF9B0086BD82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		41E74CA8FE23564649FEBA44 /* Pods-Movse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movse.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movse/Pods-Movse.release.xcconfig"; sourceTree = "<group>"; };
+		790BB692F73DC3C0C58C7A94 /* Pods_Movse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF157342021EB420086BD82 /* CoreGraphics.framework in Frameworks */,
+				A69EAEA0352D284FA525F004 /* Pods_Movse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +59,8 @@
 			children = (
 				3D1F8FF61FF21F5700930AAD /* Movse */,
 				3D1F8FF51FF21F5700930AAD /* Products */,
+				3DF157322021EB420086BD82 /* Frameworks */,
+				9BEADA3B0CE704CCEE69A4C2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,12 +78,37 @@
 				3D1F8FF71FF21F5700930AAD /* AppDelegate.h */,
 				3D1F8FF81FF21F5700930AAD /* AppDelegate.m */,
 				3D1F8FFA1FF21F5700930AAD /* Assets.xcassets */,
-				3D1F8FFC1FF21F5700930AAD /* MainMenu.xib */,
 				3D1F8FFF1FF21F5700930AAD /* Info.plist */,
 				3D1F90001FF21F5700930AAD /* main.m */,
+				3DF157352021EF9B0086BD82 /* MainMenu.xib */,
 				3D1F90021FF21F5700930AAD /* Movse.entitlements */,
+				3DF1572D2021BAAF0086BD82 /* PreferenceController.h */,
+				3DF1572E2021BAAF0086BD82 /* PreferenceController.m */,
+				3D977D25202403E00001E0BF /* DisplayArrangementView.h */,
+				3D977D26202403E00001E0BF /* DisplayArrangementView.m */,
+				3DF157302021C2940086BD82 /* Preferences.xib */,
+				3DF1572520216CFB0086BD82 /* StatusBarController.h */,
+				3DF1572620216CFB0086BD82 /* StatusBarController.m */,
 			);
 			path = Movse;
+			sourceTree = "<group>";
+		};
+		3DF157322021EB420086BD82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DF157332021EB420086BD82 /* CoreGraphics.framework */,
+				790BB692F73DC3C0C58C7A94 /* Pods_Movse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BEADA3B0CE704CCEE69A4C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B5E48DB78E3BE99523F0A37 /* Pods-Movse.debug.xcconfig */,
+				41E74CA8FE23564649FEBA44 /* Pods-Movse.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D1F90051FF21F5700930AAD /* Build configuration list for PBXNativeTarget "Movse" */;
 			buildPhases = (
+				0144E46A2969DF4F62A7B214 /* [CP] Check Pods Manifest.lock */,
 				3D1F8FF01FF21F5700930AAD /* Sources */,
 				3D1F8FF11FF21F5700930AAD /* Frameworks */,
 				3D1F8FF21FF21F5700930AAD /* Resources */,
+				A21330239E525F198B8955FB /* [CP] Embed Pods Frameworks */,
+				0C22393614F4E9A8DDB5046E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -91,12 +140,18 @@
 		3D1F8FEC1FF21F5700930AAD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MVS;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = lazyfabric;
 				TargetAttributes = {
 					3D1F8FF31FF21F5700930AAD = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -123,18 +178,79 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF157312021C2940086BD82 /* Preferences.xib in Resources */,
 				3D1F8FFB1FF21F5700930AAD /* Assets.xcassets in Resources */,
-				3D1F8FFE1FF21F5700930AAD /* MainMenu.xib in Resources */,
+				3DF157372021EF9B0086BD82 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0144E46A2969DF4F62A7B214 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Movse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C22393614F4E9A8DDB5046E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Movse/Pods-Movse-resources.sh",
+				$PODS_CONFIGURATION_BUILD_DIR/MASShortcut/MASShortcut.bundle,
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Movse/Pods-Movse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A21330239E525F198B8955FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Movse/Pods-Movse-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MASShortcut/MASShortcut.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASShortcut.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Movse/Pods-Movse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3D1F8FF01FF21F5700930AAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF1572F2021BAAF0086BD82 /* PreferenceController.m in Sources */,
+				3D977D27202403E00001E0BF /* DisplayArrangementView.m in Sources */,
+				3DF1572720216CFB0086BD82 /* StatusBarController.m in Sources */,
 				3D1F90011FF21F5700930AAD /* main.m in Sources */,
 				3D1F8FF91FF21F5700930AAD /* AppDelegate.m in Sources */,
 			);
@@ -143,10 +259,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3D1F8FFC1FF21F5700930AAD /* MainMenu.xib */ = {
+		3DF157352021EF9B0086BD82 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3D1F8FFD1FF21F5700930AAD /* Base */,
+				3DF157362021EF9B0086BD82 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -259,9 +375,9 @@
 		};
 		3D1F90061FF21F5700930AAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B5E48DB78E3BE99523F0A37 /* Pods-Movse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Movse/Movse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Movse/Info.plist;
@@ -273,9 +389,9 @@
 		};
 		3D1F90071FF21F5700930AAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41E74CA8FE23564649FEBA44 /* Pods-Movse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Movse/Movse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Movse/Info.plist;
