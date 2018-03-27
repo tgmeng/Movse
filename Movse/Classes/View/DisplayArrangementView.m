@@ -7,6 +7,13 @@
 //
 
 #import "DisplayArrangementView.h"
+#import "NSView+DrawString.h"
+
+@interface DisplayArrangementView () {
+    NSMutableDictionary<NSAttributedStringKey, id> *_attributes;
+    NSArray *_rects;
+}
+@end
 
 @implementation DisplayArrangementView
 
@@ -14,6 +21,7 @@
     self = [super initWithFrame:frameRect];
     if (self) {
         [self prepareAttributes];
+        _rects = @[];
     }
     return self;
 }
@@ -44,37 +52,34 @@
     
     // Draw Background
     NSRect bounds = [self bounds];
-    [[NSColor blueColor] set];
-    [NSBezierPath fillRect:bounds];
     
-    if (!_displays) {
-        return;
-    }
+    NSArray *displays = self.displays;
+    NSUInteger displayCount = displays.count;
     
-    if (_displayCount == 0) {
+    if (displayCount == 0) {
         return;
     }
     
     CGSize maxSize = {0, 0};
-    CGRect rects[_displayCount];
+    CGRect rects[displayCount];
     CGRect joinedRect = CGRectZero;
     
     // Prepare data for calculating scale, size and position
-    for (uint32_t i = 0; i < _displayCount; i++) {
-        CGDirectDisplayID display = _displays[i];
+    for (uint32_t i = 0; i < displayCount; i++) {
+        CGDirectDisplayID display = [self.displays[i] unsignedIntValue];
         CGRect rect = CGDisplayBounds(display);
         CGFloat width = rect.size.width;
         CGFloat height = rect.size.height;
         
-        if (maxSize.width < width) {
+        if (width > maxSize.width) {
             maxSize.width = width;
         }
         
-        if (maxSize.height < height) {
+        if (height > maxSize.height) {
             maxSize.height = height;
         }
         
-        joinedRect = [self makeWrapRectWith:rect and:joinedRect];
+        joinedRect = [self joinRect:rect and:joinedRect];
         
         rects[i] = rect;
     }
@@ -84,25 +89,34 @@
     double scaleRatio = maxScaledSize.width / maxSize.width;
     
     if (scaleRatio * maxSize.height > bounds.size.height) {
+        // Still bigger than container
         scaleRatio = maxScaledSize.height / maxSize.height;
     }
     
-    CGRect wrapRect = CGRectMake(joinedRect.origin.x * scaleRatio,
+    CGRect joinedScaledRect = CGRectMake(joinedRect.origin.x * scaleRatio,
                joinedRect.origin.y * scaleRatio,
                joinedRect.size.width * scaleRatio,
                joinedRect.size.height * scaleRatio);
     
-    CGFloat offsetX = (bounds.size.width - wrapRect.size.width) / 2;
-    CGFloat offsetY = (bounds.size.height - wrapRect.size.height) / 2;
-    
+    // Calc offset for centering display rect
+    CGFloat offsetX = (bounds.size.width - joinedScaledRect.size.width) / 2;
+    if (joinedScaledRect.origin.x < 0) {
+        offsetX += fabs(joinedScaledRect.origin.x);
+    }
+    CGFloat offsetY = (bounds.size.height - joinedScaledRect.size.height) / 2;
+    if (joinedScaledRect.origin.y < 0) {
+        offsetY += fabs(joinedScaledRect.origin.y);
+    }
+
 #ifdef DEBUG
     // Draw wrap rect
-    wrapRect = CGRectOffset(wrapRect, offsetX, offsetY);
+    joinedScaledRect = CGRectOffset(joinedScaledRect, offsetX, offsetY);
     [[NSColor grayColor] set];
-    [NSBezierPath fillRect:NSRectFromCGRect(wrapRect)];
+    [NSBezierPath fillRect:NSRectFromCGRect(joinedScaledRect)];
 #endif
     
-    for (uint32_t i = 0; i < _displayCount; i++) {
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:displayCount];
+    for (uint32_t i = 0; i < displayCount; i++) {
         // Draw display rect
         [[NSColor whiteColor] set];
         CGRect rect = rects[i];
@@ -115,22 +129,13 @@
         [self drawString:[NSString stringWithFormat:@"%d", i + 1]
               WithAttributes:_attributes
               CenteredIn:drawingRect];
+        [array addObject:@(drawingRect)];
     }
-}
-
-- (void)drawString:(NSString *)str
-    WithAttributes:(NSDictionary<NSAttributedStringKey, id> *)attr
-        CenteredIn:(CGRect)r {
-    CGSize strSize = [str sizeWithAttributes:attr];
     
-    CGPoint strOrigin;
-    strOrigin = CGPointMake(r.origin.x + (r.size.width - strSize.width) / 2,
-                           r.origin.y + (r.size.height - strSize.height) / 2);
-
-    [str drawAtPoint:strOrigin withAttributes:attr];
+    _rects = [NSArray arrayWithArray:array];
 }
 
-- (CGRect)makeWrapRectWith:(CGRect)rectA and:(CGRect)rectB {
+- (CGRect)joinRect:(CGRect)rectA and:(CGRect)rectB {
     CGFloat xl = MIN(CGRectGetMinX(rectA), CGRectGetMinX(rectB));
     CGFloat xr = MAX(CGRectGetMaxX(rectA), CGRectGetMaxX(rectB));
     
@@ -142,14 +147,27 @@
 
 #pragma mark Accessors
 
-- (CGDirectDisplayID *)displays {
+@synthesize displays = _displays;
+
+- (NSArray *)displays {
     return _displays;
 }
 
-- (void)setDisplays:(CGDirectDisplayID *)displays andCount:(uint32_t)number{
+- (void)setDisplays:(NSArray *)displays {
     _displays = displays;
-    _displayCount = number;
     [self setNeedsDisplay:YES];
+}
+
+#pragma mark - Events
+- (void)mouseDown:(NSEvent *)event {
+    NSPoint p = [self convertPoint:[event locationInWindow] fromView:nil];
+    
+    for (NSValue *v in _rects) {
+        NSRect rect = [v rectValue];
+        if (NSPointInRect(p, rect)) {
+            break;
+        }
+    }
 }
 
 @end

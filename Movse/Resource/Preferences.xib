@@ -57,7 +57,7 @@
                                     </textFieldCell>
                                 </textField>
                                 <button toolTip="When reached end, move to the other endpoint display." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nB8-4K-Nig">
-                                    <rect key="frame" x="386" y="22" width="60" height="18"/>
+                                    <rect key="frame" x="386" y="23" width="60" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="check" title="Loop?" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="3hG-Vy-Ps1">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -74,13 +74,34 @@
                             </subviews>
                         </view>
                     </box>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TsU-HF-KRB" customClass="DisplayArrangementView">
-                        <rect key="frame" x="20" y="20" width="460" height="196"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </customView>
+                    <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="ILy-iK-rqf">
+                        <rect key="frame" x="17" y="16" width="466" height="200"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <view key="contentView" id="mIW-pS-pQE">
+                            <rect key="frame" x="1" y="1" width="464" height="198"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TsU-HF-KRB" customClass="DisplayArrangementView">
+                                    <rect key="frame" x="0.0" y="0.0" width="464" height="198"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ac9-YQ-QJM">
+                                            <rect key="frame" x="18" y="164" width="205" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="* Mouse will move in sequence" usesSingleLineMode="YES" id="P5S-e5-5OH">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </customView>
+                            </subviews>
+                        </view>
+                    </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="437.5" y="-72.5"/>
+            <point key="canvasLocation" x="506" y="-177"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="ZKH-4O-YAW"/>
     </objects>

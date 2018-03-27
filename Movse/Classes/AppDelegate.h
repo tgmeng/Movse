@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Constants.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 

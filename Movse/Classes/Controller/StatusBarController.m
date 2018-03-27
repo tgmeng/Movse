@@ -16,16 +16,19 @@
     if (self) {
         NSStatusBar *bar = [NSStatusBar systemStatusBar];
         
-        _statusItem = [bar statusItemWithLength:NSSquareStatusItemLength];
+        self.statusItem = [bar statusItemWithLength:NSSquareStatusItemLength];
         
-        [_statusItem setImage: [NSImage imageNamed:@"StatusBarButtonImage"]];
-        [_statusItem setHighlightMode:YES];
+        NSImage *icon = [NSImage imageNamed:kStatusBarIcon];
+        icon.template = YES;
+        self.statusItem.image = icon;
+        
+        self.statusItem.highlightMode = YES;
     }
     return self;
 }
 
 - (void)awakeFromNib {
-    [_statusItem setMenu:_menu];
+    self.statusItem.menu = _menu;
 }
 
 @end

@@ -10,12 +10,19 @@
 		3D1F8FF91FF21F5700930AAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1F8FF81FF21F5700930AAD /* AppDelegate.m */; };
 		3D1F8FFB1FF21F5700930AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1F8FFA1FF21F5700930AAD /* Assets.xcassets */; };
 		3D1F90011FF21F5700930AAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1F90001FF21F5700930AAD /* main.m */; };
+		3D59CF7A20413FA100BBE102 /* MVSDisplayState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D59CF7920413FA100BBE102 /* MVSDisplayState.m */; };
+		3D7560FF20628DE90032C077 /* NSView+DrawString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7560FE20628DE90032C077 /* NSView+DrawString.m */; };
+		3D7561012064DAF30032C077 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3D7561002064DAF30032C077 /* LICENSE */; };
 		3D977D27202403E00001E0BF /* DisplayArrangementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D977D26202403E00001E0BF /* DisplayArrangementView.m */; };
+		3DD8558020316C9A00D44DFF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD8557F20316C9A00D44DFF /* Constants.m */; };
 		3DF1572720216CFB0086BD82 /* StatusBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1572620216CFB0086BD82 /* StatusBarController.m */; };
 		3DF1572F2021BAAF0086BD82 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1572E2021BAAF0086BD82 /* PreferenceController.m */; };
 		3DF157312021C2940086BD82 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF157302021C2940086BD82 /* Preferences.xib */; };
 		3DF157342021EB420086BD82 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF157332021EB420086BD82 /* CoreGraphics.framework */; };
 		3DF157372021EF9B0086BD82 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF157352021EF9B0086BD82 /* MainMenu.xib */; };
+		3DF6DD762061E907002CE8D9 /* MVSDrawingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF6DD752061E907002CE8D9 /* MVSDrawingWindow.m */; };
+		3DF6DD892062709E002CE8D9 /* MVSCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF6DD882062709E002CE8D9 /* MVSCenter.m */; };
+		3DF6DD92206286BE002CE8D9 /* MVSMouseCatcherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF6DD91206286BE002CE8D9 /* MVSMouseCatcherView.m */; };
 		A69EAEA0352D284FA525F004 /* Pods_Movse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790BB692F73DC3C0C58C7A94 /* Pods_Movse.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,8 +35,15 @@
 		3D1F8FFF1FF21F5700930AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D1F90001FF21F5700930AAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D1F90021FF21F5700930AAD /* Movse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Movse.entitlements; sourceTree = "<group>"; };
+		3D59CF7820413FA100BBE102 /* MVSDisplayState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVSDisplayState.h; sourceTree = "<group>"; };
+		3D59CF7920413FA100BBE102 /* MVSDisplayState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVSDisplayState.m; sourceTree = "<group>"; };
+		3D7560FD20628DE90032C077 /* NSView+DrawString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView+DrawString.h"; sourceTree = "<group>"; };
+		3D7560FE20628DE90032C077 /* NSView+DrawString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+DrawString.m"; sourceTree = "<group>"; };
+		3D7561002064DAF30032C077 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3D977D25202403E00001E0BF /* DisplayArrangementView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayArrangementView.h; sourceTree = "<group>"; };
 		3D977D26202403E00001E0BF /* DisplayArrangementView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayArrangementView.m; sourceTree = "<group>"; };
+		3DD8557E20316C9A00D44DFF /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		3DD8557F20316C9A00D44DFF /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		3DF1572520216CFB0086BD82 /* StatusBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusBarController.h; sourceTree = "<group>"; };
 		3DF1572620216CFB0086BD82 /* StatusBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusBarController.m; sourceTree = "<group>"; };
 		3DF1572D2021BAAF0086BD82 /* PreferenceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
@@ -37,6 +51,13 @@
 		3DF157302021C2940086BD82 /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		3DF157332021EB420086BD82 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3DF157362021EF9B0086BD82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3DF6DD742061E907002CE8D9 /* MVSDrawingWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVSDrawingWindow.h; sourceTree = "<group>"; };
+		3DF6DD752061E907002CE8D9 /* MVSDrawingWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVSDrawingWindow.m; sourceTree = "<group>"; };
+		3DF6DD802061EADE002CE8D9 /* Movse-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Movse-Prefix.pch"; sourceTree = "<group>"; };
+		3DF6DD872062709E002CE8D9 /* MVSCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVSCenter.h; sourceTree = "<group>"; };
+		3DF6DD882062709E002CE8D9 /* MVSCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVSCenter.m; sourceTree = "<group>"; };
+		3DF6DD90206286BE002CE8D9 /* MVSMouseCatcherView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVSMouseCatcherView.h; sourceTree = "<group>"; };
+		3DF6DD91206286BE002CE8D9 /* MVSMouseCatcherView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVSMouseCatcherView.m; sourceTree = "<group>"; };
 		41E74CA8FE23564649FEBA44 /* Pods-Movse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movse.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movse/Pods-Movse.release.xcconfig"; sourceTree = "<group>"; };
 		790BB692F73DC3C0C58C7A94 /* Pods_Movse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -57,6 +78,7 @@
 		3D1F8FEB1FF21F5700930AAD = {
 			isa = PBXGroup;
 			children = (
+				3D7561002064DAF30032C077 /* LICENSE */,
 				3D1F8FF61FF21F5700930AAD /* Movse */,
 				3D1F8FF51FF21F5700930AAD /* Products */,
 				3DF157322021EB420086BD82 /* Frameworks */,
@@ -75,22 +97,20 @@
 		3D1F8FF61FF21F5700930AAD /* Movse */ = {
 			isa = PBXGroup;
 			children = (
-				3D1F8FF71FF21F5700930AAD /* AppDelegate.h */,
-				3D1F8FF81FF21F5700930AAD /* AppDelegate.m */,
-				3D1F8FFA1FF21F5700930AAD /* Assets.xcassets */,
-				3D1F8FFF1FF21F5700930AAD /* Info.plist */,
-				3D1F90001FF21F5700930AAD /* main.m */,
-				3DF157352021EF9B0086BD82 /* MainMenu.xib */,
 				3D1F90021FF21F5700930AAD /* Movse.entitlements */,
-				3DF1572D2021BAAF0086BD82 /* PreferenceController.h */,
-				3DF1572E2021BAAF0086BD82 /* PreferenceController.m */,
-				3D977D25202403E00001E0BF /* DisplayArrangementView.h */,
-				3D977D26202403E00001E0BF /* DisplayArrangementView.m */,
-				3DF157302021C2940086BD82 /* Preferences.xib */,
-				3DF1572520216CFB0086BD82 /* StatusBarController.h */,
-				3DF1572620216CFB0086BD82 /* StatusBarController.m */,
+				3DF6DD7A2061E922002CE8D9 /* Classes */,
+				3DF6DD7B2061E929002CE8D9 /* Resource */,
 			);
 			path = Movse;
+			sourceTree = "<group>";
+		};
+		3D7560FC20628D610032C077 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3D7560FD20628DE90032C077 /* NSView+DrawString.h */,
+				3D7560FE20628DE90032C077 /* NSView+DrawString.m */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		3DF157322021EB420086BD82 /* Frameworks */ = {
@@ -100,6 +120,77 @@
 				790BB692F73DC3C0C58C7A94 /* Pods_Movse.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DF6DD7A2061E922002CE8D9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3D1F8FF71FF21F5700930AAD /* AppDelegate.h */,
+				3D1F8FF81FF21F5700930AAD /* AppDelegate.m */,
+				3D1F90001FF21F5700930AAD /* main.m */,
+				3DF6DD7E2061EA0F002CE8D9 /* Manager */,
+				3DF6DD7D2061E9FE002CE8D9 /* Controller */,
+				3DF6DD7C2061E9F1002CE8D9 /* View */,
+				3DF6DD7F2061EA2C002CE8D9 /* Define */,
+				3D7560FC20628D610032C077 /* Utility */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3DF6DD7B2061E929002CE8D9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3DF157352021EF9B0086BD82 /* MainMenu.xib */,
+				3DF157302021C2940086BD82 /* Preferences.xib */,
+				3D1F8FFA1FF21F5700930AAD /* Assets.xcassets */,
+				3D1F8FFF1FF21F5700930AAD /* Info.plist */,
+				3DF6DD802061EADE002CE8D9 /* Movse-Prefix.pch */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		3DF6DD7C2061E9F1002CE8D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D977D25202403E00001E0BF /* DisplayArrangementView.h */,
+				3D977D26202403E00001E0BF /* DisplayArrangementView.m */,
+				3DF6DD742061E907002CE8D9 /* MVSDrawingWindow.h */,
+				3DF6DD752061E907002CE8D9 /* MVSDrawingWindow.m */,
+				3DF6DD90206286BE002CE8D9 /* MVSMouseCatcherView.h */,
+				3DF6DD91206286BE002CE8D9 /* MVSMouseCatcherView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DF6DD7D2061E9FE002CE8D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3DF1572D2021BAAF0086BD82 /* PreferenceController.h */,
+				3DF1572E2021BAAF0086BD82 /* PreferenceController.m */,
+				3DF1572520216CFB0086BD82 /* StatusBarController.h */,
+				3DF1572620216CFB0086BD82 /* StatusBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3DF6DD7E2061EA0F002CE8D9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				3D59CF7820413FA100BBE102 /* MVSDisplayState.h */,
+				3D59CF7920413FA100BBE102 /* MVSDisplayState.m */,
+				3DF6DD872062709E002CE8D9 /* MVSCenter.h */,
+				3DF6DD882062709E002CE8D9 /* MVSCenter.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		3DF6DD7F2061EA2C002CE8D9 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				3DD8557E20316C9A00D44DFF /* Constants.h */,
+				3DD8557F20316C9A00D44DFF /* Constants.m */,
+			);
+			path = Define;
 			sourceTree = "<group>";
 		};
 		9BEADA3B0CE704CCEE69A4C2 /* Pods */ = {
@@ -180,6 +271,7 @@
 			files = (
 				3DF157312021C2940086BD82 /* Preferences.xib in Resources */,
 				3D1F8FFB1FF21F5700930AAD /* Assets.xcassets in Resources */,
+				3D7561012064DAF30032C077 /* LICENSE in Resources */,
 				3DF157372021EF9B0086BD82 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,11 +340,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF6DD92206286BE002CE8D9 /* MVSMouseCatcherView.m in Sources */,
 				3DF1572F2021BAAF0086BD82 /* PreferenceController.m in Sources */,
 				3D977D27202403E00001E0BF /* DisplayArrangementView.m in Sources */,
+				3D59CF7A20413FA100BBE102 /* MVSDisplayState.m in Sources */,
+				3DF6DD892062709E002CE8D9 /* MVSCenter.m in Sources */,
 				3DF1572720216CFB0086BD82 /* StatusBarController.m in Sources */,
 				3D1F90011FF21F5700930AAD /* main.m in Sources */,
 				3D1F8FF91FF21F5700930AAD /* AppDelegate.m in Sources */,
+				3DD8558020316C9A00D44DFF /* Constants.m in Sources */,
+				3D7560FF20628DE90032C077 /* NSView+DrawString.m in Sources */,
+				3DF6DD762061E907002CE8D9 /* MVSDrawingWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +406,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Movse/Resource/Movse-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -318,7 +418,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				INFOPLIST_FILE = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -361,13 +462,16 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Movse/Resource/Movse-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				INFOPLIST_FILE = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -380,8 +484,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Movse/Info.plist;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Movse/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lazyfabric.Movse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -394,8 +499,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Movse/Info.plist;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Movse/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lazyfabric.Movse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

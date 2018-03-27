@@ -10,25 +10,21 @@
 #import <Foundation/Foundation.h>
 #import <MASShortcut/Shortcut.h>
 #import "DisplayArrangementView.h"
-
-static uint32_t const MAX_DISPLAYS = 50;
+#import "Constants.h"
 
 extern NSString *const MVSCustomPreviousShortcutKey;
 extern NSString *const MVSCustomNextShortcut;
 extern NSString *const MVSIsLoop;
 
-@interface PreferenceController : NSWindowController {
-    CGDirectDisplayID _displays[MAX_DISPLAYS];
-    uint32_t _displayCount;
-    
-    NSMutableDictionary<NSNumber *, NSValue *> *_mousePos;
-}
+@interface PreferenceController : NSWindowController
 
 @property (nonatomic, weak) IBOutlet MASShortcutView *previousShortcutView;
 @property (nonatomic, weak) IBOutlet MASShortcutView *nextShortcutView;
 @property (weak) IBOutlet DisplayArrangementView *displayArrangementView;
 
-- (void)updateDisplays;
 - (void)updateDisplayArragementView;
+
++ (BOOL)isPreferenceLoop;
++ (void)setPreferenceLoop:(BOOL)isLoop;
 
 @end

@@ -6,13 +6,14 @@
 //  Copyright © 2017年 lazyfabric. All rights reserved.
 //
 
+#import <MASShortcut/Shortcut.h>
 #import "AppDelegate.h"
 #import "StatusBarController.h"
 #import "PreferenceController.h"
+#import "MVSCenter.h"
 
 @interface AppDelegate ()
 
-@property (weak) IBOutlet NSWindow *window;
 @property StatusBarController *statusBarController;
 @property PreferenceController *preferenceController;
 
@@ -27,11 +28,14 @@
     
     [defaultValue setObject:[NSNumber numberWithBool:YES] forKey:MVSIsLoop];
     
-     [defaults registerDefaults:defaultValue];
+    [defaults registerDefaults:defaultValue];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
+    // Init center
+    [MVSCenter sharedCenter];
     
 #ifdef DEBUG
     [self openPreferences:self];
@@ -42,14 +46,13 @@
     // Insert code here to tear down your application
 }
 
-
 - (void)openPreferences:(id)sender {
-    if (!_preferenceController) {
-        _preferenceController = [[PreferenceController alloc] init];
+    if (!self.preferenceController) {
+        self.preferenceController = [[PreferenceController alloc] init];
     }
     
     [NSApp activateIgnoringOtherApps:YES];
-    [_preferenceController showWindow:self];;
+    [self.preferenceController showWindow:self];
 }
 
 @end
