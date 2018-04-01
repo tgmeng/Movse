@@ -11,5 +11,8 @@
 @interface MVSCenter : NSObject
 
 + (instancetype)sharedCenter;
+
+- (void)moveCursorWithIndex:(NSUInteger)index;
+- (void)showMouseCatcher;
     
 @end

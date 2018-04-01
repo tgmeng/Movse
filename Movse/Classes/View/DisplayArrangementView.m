@@ -162,9 +162,13 @@
 - (void)mouseDown:(NSEvent *)event {
     NSPoint p = [self convertPoint:[event locationInWindow] fromView:nil];
     
-    for (NSValue *v in _rects) {
+    for (NSUInteger i = 0; i < _rects.count; i++) {
+        NSValue *v = _rects[i];
         NSRect rect = [v rectValue];
         if (NSPointInRect(p, rect)) {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(displayArragementView:didClickDisplay:withEvent:)]) {
+                [self.delegate displayArragementView:self didClickDisplay:i withEvent:event];
+            }
             break;
         }
     }

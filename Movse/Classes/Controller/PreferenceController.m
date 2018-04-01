@@ -8,6 +8,7 @@
 
 #import "PreferenceController.h"
 #import "MVSDisplayState.h"
+#import "MVSCenter.h"
 
 NSString *const MVSCustomPreviousShortcutKey = @"customPreviousShortcut";
 NSString *const MVSCustomNextShortcut = @"customNextShortcut";
@@ -32,6 +33,7 @@ NSString *const MVSIsLoop = @"isLoop";
     [self.previousShortcutView setAssociatedUserDefaultsKey:MVSCustomPreviousShortcutKey];
     [self.nextShortcutView setAssociatedUserDefaultsKey:MVSCustomNextShortcut];
     
+    self.displayArrangementView.delegate = self;
     [self updateDisplayArragementView];
 }
 
@@ -55,6 +57,20 @@ NSString *const MVSIsLoop = @"isLoop";
 
 - (void)onDisplayStateChanged:(NSNotification *)notification {
     [self updateDisplayArragementView];
+}
+
+- (void)displayArragementView:(DisplayArrangementView *)view didClickDisplay:(NSUInteger)index withEvent:(NSEvent *)event {
+    // Old position
+    NSPoint offset = [event locationInWindow];
+    
+    MVSCenter *center = [MVSCenter sharedCenter];
+    [center moveCursorWithIndex:index];
+    [center showMouseCatcher];
+    
+    // New position
+    NSPoint p = [NSEvent mouseLocation];
+    [self.window setFrameOrigin:NSMakePoint(p.x - offset.x,
+                                            p.y - offset.y)];
 }
 
 @end

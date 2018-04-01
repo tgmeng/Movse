@@ -109,7 +109,38 @@
     }];
 }
 
-- (void)moveCursorToSiblingScreen:(BOOL)isPrevious {
+/**
+ @abstract Find the CGDirectDisplayID where the mouse at.
+ */
+- (CGDirectDisplayID)CGDirectDisplayIDWhereTheMouseAt {
+    NSPoint mouseLoc = [NSEvent mouseLocation];
+    CGRect mainDispRect = CGDisplayBounds(CGMainDisplayID());
+    // Convert to global display coordinates
+    mouseLoc.y = -mouseLoc.y + mainDispRect.size.height;
+    
+    return [self CGDirectDisplayIDAtPoint:mouseLoc];
+}
+
+/**
+  @abstract Find the CGDirectDisplayID at a point in global display coordinate space.
+  */
+- (CGDirectDisplayID)CGDirectDisplayIDAtPoint:(NSPoint)point {
+    u_int32_t count = 0;
+    CGDirectDisplayID tDisplays[MAX_DISPLAYS];
+    CGGetDisplaysWithPoint(NSPointToCGPoint(point), MAX_DISPLAYS, tDisplays, &count);
+    
+    // Find the display where the mouse at
+    CGDirectDisplayID curDisplayID = 0;
+    u_int32_t i = 0;
+    while (i < count && !CGDisplayIsActive(tDisplays[i])) {
+        i++;
+    }
+    curDisplayID = tDisplays[i];
+    
+    return curDisplayID;
+}
+
+- (void)moveCursorWithIndex:(NSUInteger)index {
     NSPoint mouseLoc = [NSEvent mouseLocation];
     CGRect mainDispRect = CGDisplayBounds(CGMainDisplayID());
     
@@ -120,33 +151,20 @@
     NSArray *displays = [state displays];
     NSUInteger displayCount = displays.count;
     
-    u_int32_t count = 0;
-    CGDirectDisplayID tDisplays[MAX_DISPLAYS];
-    CGGetDisplaysWithPoint(NSPointToCGPoint(mouseLoc), MAX_DISPLAYS, tDisplays, &count);
+    CGDirectDisplayID curDisplayID = [self CGDirectDisplayIDAtPoint:mouseLoc];
     
-    // Find the display where the mouse at
-    CGDirectDisplayID curDisplayID = 0;
-    u_int32_t i = 0;
-    while (i < count && !CGDisplayIsActive(tDisplays[i])) {
-        i++;
-    }
-    curDisplayID = tDisplays[i];
-    
-    // Get sibling display according to "isPrevious"
-    CGDirectDisplayID siblingDisplayID = 0;
-    while (i < displayCount && curDisplayID != [displays[i] unsignedIntValue]) {
-        i++;
-    }
-    u_int32_t siblingIndex = (i + (isPrevious ? -1 : 1) * 1);
-    
-    if (![PreferenceController isPreferenceLoop] && siblingIndex >= displayCount) {
+    if (![PreferenceController isPreferenceLoop] && index >= displayCount) {
         return;
     }
     
-    siblingIndex = siblingIndex % displayCount;
-    siblingDisplayID = [displays[siblingIndex] unsignedIntValue];
+    index = index % displayCount;
+    CGDirectDisplayID nextDisplayID = [displays[index] unsignedIntValue];
     
-    NSValue *lastValue = [self.mousePositonBuffer objectForKey:[NSNumber numberWithUnsignedInteger:siblingDisplayID]];
+    if (curDisplayID == nextDisplayID) {
+        return;
+    }
+    
+    NSValue *lastValue = [self.mousePositonBuffer objectForKey:[NSNumber numberWithUnsignedInteger:nextDisplayID]];
     CGPoint siblingPoint = CGPointZero;
     
     // Get last pos
@@ -154,18 +172,34 @@
         [lastValue getValue:&siblingPoint];
     } else {
         // Default: center of the display
-        CGRect rect = CGDisplayBounds(siblingDisplayID);
+        CGRect rect = CGDisplayBounds(nextDisplayID);
         siblingPoint = CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
     }
     
     // Save pos
     CGPoint point = NSPointToCGPoint(mouseLoc);
     [self.mousePositonBuffer setObject:[NSValue valueWithBytes:&point
-                                        objCType:@encode(CGPoint)]
-                  forKey:[NSNumber numberWithUnsignedInteger:curDisplayID]];
+                                                      objCType:@encode(CGPoint)]
+                                forKey:[NSNumber numberWithUnsignedInteger:curDisplayID]];
     
     // Move mouse
     CGWarpMouseCursorPosition(siblingPoint);
+}
+
+- (void)moveCursorToSiblingScreen:(BOOL)isPrevious {
+    MVSDisplayState *state = [MVSDisplayState sharedState];
+    NSArray *displays = [state displays];
+    NSUInteger displayCount = displays.count;
+    
+    CGDirectDisplayID curDisplayID = [self CGDirectDisplayIDWhereTheMouseAt];
+    
+    u_int32_t i = 0;
+    while (i < displayCount && curDisplayID != [displays[i] unsignedIntValue]) {
+        i++;
+    }
+    u_int32_t siblingIndex = (i + (isPrevious ? -1 : 1) * 1);
+    
+    [self moveCursorWithIndex:siblingIndex];
 }
 
 - (void)onDisplayStateChanged:(NSNotification*)notification {

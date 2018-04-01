@@ -16,7 +16,7 @@ extern NSString *const MVSCustomPreviousShortcutKey;
 extern NSString *const MVSCustomNextShortcut;
 extern NSString *const MVSIsLoop;
 
-@interface PreferenceController : NSWindowController
+@interface PreferenceController : NSWindowController <DisplayArragementViewDelegate>
 
 @property (nonatomic, weak) IBOutlet MASShortcutView *previousShortcutView;
 @property (nonatomic, weak) IBOutlet MASShortcutView *nextShortcutView;
