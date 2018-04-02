@@ -10,7 +10,7 @@
 将 Movse.app 拖到「应用程序」里即可。
 
 ## 使用
-太懒了，随便丢个截图算了。
+太懒了，随便丢个截图算了。  
 ![logo](images/screenshot.png "Movse.app 截图")
 
 ## License
