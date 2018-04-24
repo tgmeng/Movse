@@ -6,13 +6,16 @@
 //  Copyright © 2018年 lazyfabric. All rights reserved.
 //
 
+#import <ServiceManagement/ServiceManagement.h>
 #import "PreferenceController.h"
 #import "MVSDisplayState.h"
 #import "MVSCenter.h"
 
 NSString *const MVSCustomPreviousShortcutKey = @"customPreviousShortcut";
 NSString *const MVSCustomNextShortcut = @"customNextShortcut";
-NSString *const MVSIsLoop = @"isLoop";
+NSString *const MVSLoop = @"loop";
+NSString *const MVSLaunchAtLogin = @"launchAtLogin";
+NSString *const MVSHelperBundleIdentifier = @"com.lazyfabric.MovseHelper";
 
 @implementation PreferenceController
 
@@ -33,6 +36,8 @@ NSString *const MVSIsLoop = @"isLoop";
     [self.previousShortcutView setAssociatedUserDefaultsKey:MVSCustomPreviousShortcutKey];
     [self.nextShortcutView setAssociatedUserDefaultsKey:MVSCustomNextShortcut];
     
+    self.launchAtLogin.state = [PreferenceController isLaunchAtLogin];
+    
     self.displayArrangementView.delegate = self;
     [self updateDisplayArragementView];
 }
@@ -41,12 +46,55 @@ NSString *const MVSIsLoop = @"isLoop";
 
 + (BOOL)isPreferenceLoop {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    return [defaults boolForKey:MVSIsLoop];
+    return [defaults boolForKey:MVSLoop];
 }
 
-+ (void)setPreferenceLoop:(BOOL)isLoop {
++ (void)setPreferenceLoop:(BOOL)loop {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    return [defaults setBool:isLoop forKey:MVSIsLoop];
+    return [defaults setBool:loop forKey:MVSLoop];
+}
+
++ (BOOL)isLaunchAtLogin {
+    // SMJobCopyDictionary is not useful
+    NSArray *jobs = (__bridge_transfer NSArray *)(SMCopyAllJobDictionaries(kSMDomainUserLaunchd));
+    BOOL value = NO;
+    
+    if ([jobs count] > 0) {
+        for (NSDictionary *job in jobs) {
+            if ([MVSHelperBundleIdentifier isEqualToString:[job objectForKey:@"Label"]]) {
+                value = [[job objectForKey:@"OnDemand"] boolValue];
+                break;
+            }
+        }
+    }
+    
+    return value;
+}
+
++ (void)setLaunchAtLogin:(BOOL)state {
+    [self setLaunchAtLogin:state failureBlock:nil];
+}
+
++ (void)setLaunchAtLogin:(BOOL)state failureBlock:(void (^)(void))block {
+    BOOL res = SMLoginItemSetEnabled ((__bridge CFStringRef)MVSHelperBundleIdentifier, state);
+    if (!res) {
+        block();
+    }
+}
+
+- (IBAction)toggleLaunchAtLogin:(id)sender {
+    BOOL state = (BOOL)[sender state];
+    [PreferenceController setLaunchAtLogin:state failureBlock:^{
+        NSAlert *alert = [NSAlert alertWithMessageText:@"An error ocurred"
+                                         defaultButton:@"OK"
+                                       alternateButton:nil
+                                           otherButton:nil
+                             informativeTextWithFormat:@"Couldn't %@ Helper App to launch at login item list.", (state ? @"add" : @"remove")];
+        [alert beginSheetModalForWindow:self.window
+                          modalDelegate:nil
+                         didEndSelector:nil
+                            contextInfo:nil];
+    }];
 }
 
 - (void)updateDisplayArragementView {

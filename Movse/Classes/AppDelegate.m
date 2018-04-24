@@ -26,7 +26,7 @@
     NSMutableDictionary *defaultValue = [NSMutableDictionary dictionary];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    [defaultValue setObject:[NSNumber numberWithBool:YES] forKey:MVSIsLoop];
+    [defaultValue setObject:[NSNumber numberWithBool:YES] forKey:MVSLoop];
     
     [defaults registerDefaults:defaultValue];
 }

@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1D8B25208F5AB1009D5FD5 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1D8B24208F5AB1009D5FD5 /* ServiceManagement.framework */; };
 		3D1F8FF91FF21F5700930AAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1F8FF81FF21F5700930AAD /* AppDelegate.m */; };
 		3D1F8FFB1FF21F5700930AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1F8FFA1FF21F5700930AAD /* Assets.xcassets */; };
 		3D1F90011FF21F5700930AAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1F90001FF21F5700930AAD /* main.m */; };
 		3D59CF7A20413FA100BBE102 /* MVSDisplayState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D59CF7920413FA100BBE102 /* MVSDisplayState.m */; };
+		3D6029BC208E15930099C924 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6029BB208E15930099C924 /* AppDelegate.m */; };
+		3D6029BE208E15930099C924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D6029BD208E15930099C924 /* Assets.xcassets */; };
+		3D6029C1208E15930099C924 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6029BF208E15930099C924 /* MainMenu.xib */; };
+		3D6029C4208E15930099C924 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6029C3208E15930099C924 /* main.m */; };
+		3D6029CA208E16290099C924 /* MovseHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D6029B8208E15930099C924 /* MovseHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3D7560FF20628DE90032C077 /* NSView+DrawString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7560FE20628DE90032C077 /* NSView+DrawString.m */; };
 		3D7561012064DAF30032C077 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3D7561002064DAF30032C077 /* LICENSE */; };
 		3D977D27202403E00001E0BF /* DisplayArrangementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D977D26202403E00001E0BF /* DisplayArrangementView.m */; };
@@ -26,8 +32,22 @@
 		A69EAEA0352D284FA525F004 /* Pods_Movse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790BB692F73DC3C0C58C7A94 /* Pods_Movse.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3D6029C9208E16070099C924 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				3D6029CA208E16290099C924 /* MovseHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2B5E48DB78E3BE99523F0A37 /* Pods-Movse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movse/Pods-Movse.debug.xcconfig"; sourceTree = "<group>"; };
+		3D1D8B24208F5AB1009D5FD5 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		3D1F8FF41FF21F5700930AAD /* Movse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1F8FF71FF21F5700930AAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3D1F8FF81FF21F5700930AAD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -37,6 +57,14 @@
 		3D1F90021FF21F5700930AAD /* Movse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Movse.entitlements; sourceTree = "<group>"; };
 		3D59CF7820413FA100BBE102 /* MVSDisplayState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVSDisplayState.h; sourceTree = "<group>"; };
 		3D59CF7920413FA100BBE102 /* MVSDisplayState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVSDisplayState.m; sourceTree = "<group>"; };
+		3D6029B8208E15930099C924 /* MovseHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovseHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D6029BA208E15930099C924 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3D6029BB208E15930099C924 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3D6029BD208E15930099C924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D6029C0208E15930099C924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3D6029C2208E15930099C924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D6029C3208E15930099C924 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D6029C5208E15930099C924 /* MovseHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MovseHelper.entitlements; sourceTree = "<group>"; };
 		3D7560FD20628DE90032C077 /* NSView+DrawString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView+DrawString.h"; sourceTree = "<group>"; };
 		3D7560FE20628DE90032C077 /* NSView+DrawString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+DrawString.m"; sourceTree = "<group>"; };
 		3D7561002064DAF30032C077 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -67,8 +95,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D1D8B25208F5AB1009D5FD5 /* ServiceManagement.framework in Frameworks */,
 				3DF157342021EB420086BD82 /* CoreGraphics.framework in Frameworks */,
 				A69EAEA0352D284FA525F004 /* Pods_Movse.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6029B5208E15930099C924 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +116,7 @@
 			children = (
 				3D7561002064DAF30032C077 /* LICENSE */,
 				3D1F8FF61FF21F5700930AAD /* Movse */,
+				3D6029B9208E15930099C924 /* MovseHelper */,
 				3D1F8FF51FF21F5700930AAD /* Products */,
 				3DF157322021EB420086BD82 /* Frameworks */,
 				9BEADA3B0CE704CCEE69A4C2 /* Pods */,
@@ -90,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				3D1F8FF41FF21F5700930AAD /* Movse.app */,
+				3D6029B8208E15930099C924 /* MovseHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +142,20 @@
 			path = Movse;
 			sourceTree = "<group>";
 		};
+		3D6029B9208E15930099C924 /* MovseHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3D6029BA208E15930099C924 /* AppDelegate.h */,
+				3D6029BB208E15930099C924 /* AppDelegate.m */,
+				3D6029BD208E15930099C924 /* Assets.xcassets */,
+				3D6029BF208E15930099C924 /* MainMenu.xib */,
+				3D6029C2208E15930099C924 /* Info.plist */,
+				3D6029C3208E15930099C924 /* main.m */,
+				3D6029C5208E15930099C924 /* MovseHelper.entitlements */,
+			);
+			path = MovseHelper;
+			sourceTree = "<group>";
+		};
 		3D7560FC20628D610032C077 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +168,7 @@
 		3DF157322021EB420086BD82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D1D8B24208F5AB1009D5FD5 /* ServiceManagement.framework */,
 				3DF157332021EB420086BD82 /* CoreGraphics.framework */,
 				790BB692F73DC3C0C58C7A94 /* Pods_Movse.framework */,
 			);
@@ -215,6 +268,7 @@
 				3D1F8FF21FF21F5700930AAD /* Resources */,
 				A21330239E525F198B8955FB /* [CP] Embed Pods Frameworks */,
 				0C22393614F4E9A8DDB5046E /* [CP] Copy Pods Resources */,
+				3D6029C9208E16070099C924 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -223,6 +277,23 @@
 			name = Movse;
 			productName = Movse;
 			productReference = 3D1F8FF41FF21F5700930AAD /* Movse.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D6029B7208E15930099C924 /* MovseHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D6029C8208E15930099C924 /* Build configuration list for PBXNativeTarget "MovseHelper" */;
+			buildPhases = (
+				3D6029B4208E15930099C924 /* Sources */,
+				3D6029B5208E15930099C924 /* Frameworks */,
+				3D6029B6208E15930099C924 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MovseHelper;
+			productName = MovseHelper;
+			productReference = 3D6029B8208E15930099C924 /* MovseHelper.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -240,9 +311,13 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
+					};
+					3D6029B7208E15930099C924 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -260,6 +335,7 @@
 			projectRoot = "";
 			targets = (
 				3D1F8FF31FF21F5700930AAD /* Movse */,
+				3D6029B7208E15930099C924 /* MovseHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -273,6 +349,15 @@
 				3D1F8FFB1FF21F5700930AAD /* Assets.xcassets in Resources */,
 				3D7561012064DAF30032C077 /* LICENSE in Resources */,
 				3DF157372021EF9B0086BD82 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6029B6208E15930099C924 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D6029BE208E15930099C924 /* Assets.xcassets in Resources */,
+				3D6029C1208E15930099C924 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,9 +439,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3D6029B4208E15930099C924 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D6029C4208E15930099C924 /* main.m in Sources */,
+				3D6029BC208E15930099C924 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3D6029BF208E15930099C924 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D6029C0208E15930099C924 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		3DF157352021EF9B0086BD82 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -482,13 +584,17 @@
 			baseConfigurationReference = 2B5E48DB78E3BE99523F0A37 /* Pods-Movse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Movse/Movse.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KDHX25W66C;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/Movse/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lazyfabric.Movse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -497,13 +603,55 @@
 			baseConfigurationReference = 41E74CA8FE23564649FEBA44 /* Pods-Movse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Movse/Movse.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KDHX25W66C;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/Movse/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lazyfabric.Movse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+		3D6029C6208E15930099C924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MovseHelper/MovseHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KDHX25W66C;
+				INFOPLIST_FILE = MovseHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazyfabric.MovseHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3D6029C7208E15930099C924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MovseHelper/MovseHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KDHX25W66C;
+				INFOPLIST_FILE = MovseHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazyfabric.MovseHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -524,6 +672,15 @@
 			buildConfigurations = (
 				3D1F90061FF21F5700930AAD /* Debug */,
 				3D1F90071FF21F5700930AAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D6029C8208E15930099C924 /* Build configuration list for PBXNativeTarget "MovseHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D6029C6208E15930099C924 /* Debug */,
+				3D6029C7208E15930099C924 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
