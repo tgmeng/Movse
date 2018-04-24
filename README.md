@@ -10,8 +10,13 @@
 将 Movse.app 拖到「应用程序」里即可。
 
 ## 使用
-太懒了，随便丢个截图算了。  
 ![logo](images/screenshot.png "Movse.app 截图")
+
+- **Previous & Next**：设置鼠标「前进/后退」快捷键；
+- **Loop?**：循环切换（是否首尾屏幕衔接）；
+- **Launch at login**：开机启动；
+- **屏幕布局**：当前屏幕布局，每个区块代表一个屏幕和其切换顺序；点击白块，鼠标可切换到相应屏幕。
+
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
