@@ -1,0 +1,27 @@
+
+/* Class = "NSButtonCell"; title = "Loop?"; ObjectID = "3hG-Vy-Ps1"; */
+"3hG-Vy-Ps1.title" = "循环?";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "ILy-iK-rqf"; */
+"ILy-iK-rqf.title" = "显示布局";
+
+/* Class = "NSTextFieldCell"; title = "Previous"; ObjectID = "Okq-8R-puw"; */
+"Okq-8R-puw.title" = "上一个";
+
+/* Class = "NSTextFieldCell"; title = "* Mouse will move in sequence"; ObjectID = "P5S-e5-5OH"; */
+"P5S-e5-5OH.title" = "* 鼠标按序移动";
+
+/* Class = "NSTextFieldCell"; title = "Next"; ObjectID = "UVI-k9-Dbt"; */
+"UVI-k9-Dbt.title" = "下一个";
+
+/* Class = "NSBox"; title = "Shortcuts"; ObjectID = "Z6w-ae-82b"; */
+"Z6w-ae-82b.title" = "快捷键";
+
+/* Class = "NSWindow"; title = "Preferences"; ObjectID = "Z8o-rq-uHy"; */
+"Z8o-rq-uHy.title" = "偏好设置";
+
+/* Class = "NSButtonCell"; title = "Launch at login"; ObjectID = "joD-TY-FpV"; */
+"joD-TY-FpV.title" = "开机后启动";
+
+/* Class = "NSButton"; ibShadowedToolTip = "When reached end, move to the other endpoint display."; ObjectID = "nB8-4K-Nig"; */
+"nB8-4K-Nig.ibShadowedToolTip" = "屏幕首尾衔接。";

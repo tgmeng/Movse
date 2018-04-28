@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Movse
+
+  Created by tgmeng on 2018/4/27.
+  Copyright © 2018年 lazyfabric. All rights reserved.
+*/
+
+/* An error occurred */
+"ErrorOccurred" = "ErrorOccurred";
+
+/* An error occurred when \"LaunchAtLogin\" is checked */
+"ErrorOccurredWhenLaunchAtLoginChecked" = "Couldn't add Movse Helper App to launch at login item list.";
+
+/* An error occurred when \"LaunchAtLogin\" is unchecked */
+"ErrorOccurredWhenLaunchAtLoginUnchecked" = "Couldn't remove Movse Helper App to launch at login item list.";
