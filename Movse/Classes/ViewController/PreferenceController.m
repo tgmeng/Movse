@@ -9,7 +9,7 @@
 #import <ServiceManagement/ServiceManagement.h>
 #import "PreferenceController.h"
 #import "MVSDisplayState.h"
-#import "MVSCenter.h"
+#import "MVSMouseManager.h"
 
 NSString *const MVSCustomPreviousShortcutKey = @"customPreviousShortcut";
 NSString *const MVSCustomNextShortcut = @"customNextShortcut";
@@ -85,11 +85,15 @@ NSString *const MVSHelperBundleIdentifier = @"com.lazyfabric.MovseHelper";
 - (IBAction)toggleLaunchAtLogin:(id)sender {
     BOOL state = (BOOL)[sender state];
     [PreferenceController setLaunchAtLogin:state failureBlock:^{
-        NSAlert *alert = [NSAlert alertWithMessageText:@"An error ocurred"
-                                         defaultButton:@"OK"
+        NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"ErrorOccurred", @"An error occurred")
+                                         defaultButton:nil
                                        alternateButton:nil
                                            otherButton:nil
-                             informativeTextWithFormat:@"Couldn't %@ Helper App to launch at login item list.", (state ? @"add" : @"remove")];
+                             informativeTextWithFormat: @"%@", (state ?
+                                                                NSLocalizedString(@"ErrorOccurredWhenLaunchAtLoginChecked",
+                                                                                  @"An error occurred when \"LaunchAtLogin\" is checked") :
+                                                                NSLocalizedString(@"ErrorOccurredWhenLaunchAtLoginUnchecked",
+                                                                                  @"An error occurred when \"LaunchAtLogin\" is unchecked"))];
         [alert beginSheetModalForWindow:self.window
                           modalDelegate:nil
                          didEndSelector:nil
@@ -111,9 +115,9 @@ NSString *const MVSHelperBundleIdentifier = @"com.lazyfabric.MovseHelper";
     // Old position
     NSPoint offset = [event locationInWindow];
     
-    MVSCenter *center = [MVSCenter sharedCenter];
-    [center moveCursorWithIndex:index];
-    [center showMouseCatcher];
+    MVSMouseManager *manager = [MVSMouseManager sharedManager];
+    [manager moveCursorWithIndex:index];
+    [manager showMouseCatcher];
     
     // New position
     NSPoint p = [NSEvent mouseLocation];

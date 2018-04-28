@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 #import "StatusBarController.h"
 #import "PreferenceController.h"
-#import "MVSCenter.h"
+#import "MVSMouseManager.h"
 
 @interface AppDelegate ()
 
@@ -35,7 +35,7 @@
     // Insert code here to initialize your application
     
     // Init center
-    [MVSCenter sharedCenter];
+    [MVSMouseManager sharedManager];
     
 #ifdef DEBUG
     [self openPreferences:self];

@@ -1,5 +1,5 @@
 //
-//  MVSCenter.h
+//  MVSMouseManager.h
 //  Movse
 //
 //  Created by tgmeng on 2018/3/21.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MVSCenter : NSObject
+@interface MVSMouseManager : NSObject
 
-+ (instancetype)sharedCenter;
++ (instancetype)sharedManager;
 
 - (void)moveCursorWithIndex:(NSUInteger)index;
 - (void)showMouseCatcher;

@@ -1,18 +1,18 @@
 //
-//  MVSCenter.m
+//  MVSMouseManager.m
 //  Movse
 //
 //  Created by tgmeng on 2018/3/21.
 //  Copyright © 2018年 lazyfabric. All rights reserved.
 //
 
-#import "MVSCenter.h"
+#import "MVSMouseManager.h"
 #import "MVSDisplayState.h"
 #import "PreferenceController.h"
 #import "MVSDrawingWindow.h"
 #import "MVSMouseCatcherView.h"
 
-@interface MVSCenter ()
+@interface MVSMouseManager ()
 
 @property (nonatomic, strong) NSMutableDictionary<NSNumber *, NSValue *> *mousePositonBuffer;
 @property (nonatomic, strong) MVSDrawingWindow *mouseCatcher;
@@ -20,9 +20,9 @@
 
 @end
 
-@implementation MVSCenter
+@implementation MVSMouseManager
 
-+ (instancetype)sharedCenter {
++ (instancetype)sharedManager {
     static dispatch_once_t once;
     static id sharedInstance = nil;
     dispatch_once(&once, ^{

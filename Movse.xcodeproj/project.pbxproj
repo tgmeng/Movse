@@ -19,15 +19,16 @@
 		3D6029CA208E16290099C924 /* MovseHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D6029B8208E15930099C924 /* MovseHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3D7560FF20628DE90032C077 /* NSView+DrawString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7560FE20628DE90032C077 /* NSView+DrawString.m */; };
 		3D7561012064DAF30032C077 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3D7561002064DAF30032C077 /* LICENSE */; };
+		3D9680092090142B004BCEC8 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D96800B2090142B004BCEC8 /* Preferences.xib */; };
+		3D9680192092BBA4004BCEC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D96801B2092BBA4004BCEC8 /* Localizable.strings */; };
 		3D977D27202403E00001E0BF /* DisplayArrangementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D977D26202403E00001E0BF /* DisplayArrangementView.m */; };
 		3DD8558020316C9A00D44DFF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD8557F20316C9A00D44DFF /* Constants.m */; };
 		3DF1572720216CFB0086BD82 /* StatusBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1572620216CFB0086BD82 /* StatusBarController.m */; };
 		3DF1572F2021BAAF0086BD82 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1572E2021BAAF0086BD82 /* PreferenceController.m */; };
-		3DF157312021C2940086BD82 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF157302021C2940086BD82 /* Preferences.xib */; };
 		3DF157342021EB420086BD82 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF157332021EB420086BD82 /* CoreGraphics.framework */; };
 		3DF157372021EF9B0086BD82 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF157352021EF9B0086BD82 /* MainMenu.xib */; };
 		3DF6DD762061E907002CE8D9 /* MVSDrawingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF6DD752061E907002CE8D9 /* MVSDrawingWindow.m */; };
-		3DF6DD892062709E002CE8D9 /* MVSCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF6DD882062709E002CE8D9 /* MVSCenter.m */; };
+		3DF6DD892062709E002CE8D9 /* MVSMouseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF6DD882062709E002CE8D9 /* MVSMouseManager.m */; };
 		3DF6DD92206286BE002CE8D9 /* MVSMouseCatcherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF6DD91206286BE002CE8D9 /* MVSMouseCatcherView.m */; };
 		A69EAEA0352D284FA525F004 /* Pods_Movse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790BB692F73DC3C0C58C7A94 /* Pods_Movse.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,12 @@
 		3D7560FD20628DE90032C077 /* NSView+DrawString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView+DrawString.h"; sourceTree = "<group>"; };
 		3D7560FE20628DE90032C077 /* NSView+DrawString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+DrawString.m"; sourceTree = "<group>"; };
 		3D7561002064DAF30032C077 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		3D96800A2090142B004BCEC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Preferences.xib; sourceTree = "<group>"; };
+		3D96800C20901491004BCEC8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
+		3D96800D20901491004BCEC8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Preferences.strings"; sourceTree = "<group>"; };
+		3D96800E20901491004BCEC8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
+		3D96801A2092BBA4004BCEC8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3D96801C2092BBAF004BCEC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3D977D25202403E00001E0BF /* DisplayArrangementView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayArrangementView.h; sourceTree = "<group>"; };
 		3D977D26202403E00001E0BF /* DisplayArrangementView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayArrangementView.m; sourceTree = "<group>"; };
 		3DD8557E20316C9A00D44DFF /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -76,14 +83,13 @@
 		3DF1572620216CFB0086BD82 /* StatusBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusBarController.m; sourceTree = "<group>"; };
 		3DF1572D2021BAAF0086BD82 /* PreferenceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
 		3DF1572E2021BAAF0086BD82 /* PreferenceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
-		3DF157302021C2940086BD82 /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		3DF157332021EB420086BD82 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3DF157362021EF9B0086BD82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3DF6DD742061E907002CE8D9 /* MVSDrawingWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVSDrawingWindow.h; sourceTree = "<group>"; };
 		3DF6DD752061E907002CE8D9 /* MVSDrawingWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVSDrawingWindow.m; sourceTree = "<group>"; };
 		3DF6DD802061EADE002CE8D9 /* Movse-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Movse-Prefix.pch"; sourceTree = "<group>"; };
-		3DF6DD872062709E002CE8D9 /* MVSCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVSCenter.h; sourceTree = "<group>"; };
-		3DF6DD882062709E002CE8D9 /* MVSCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVSCenter.m; sourceTree = "<group>"; };
+		3DF6DD872062709E002CE8D9 /* MVSMouseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVSMouseManager.h; sourceTree = "<group>"; };
+		3DF6DD882062709E002CE8D9 /* MVSMouseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVSMouseManager.m; sourceTree = "<group>"; };
 		3DF6DD90206286BE002CE8D9 /* MVSMouseCatcherView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVSMouseCatcherView.h; sourceTree = "<group>"; };
 		3DF6DD91206286BE002CE8D9 /* MVSMouseCatcherView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVSMouseCatcherView.m; sourceTree = "<group>"; };
 		41E74CA8FE23564649FEBA44 /* Pods-Movse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movse.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movse/Pods-Movse.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +165,8 @@
 		3D7560FC20628D610032C077 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				3DF6DD872062709E002CE8D9 /* MVSMouseManager.h */,
+				3DF6DD882062709E002CE8D9 /* MVSMouseManager.m */,
 				3D7560FD20628DE90032C077 /* NSView+DrawString.h */,
 				3D7560FE20628DE90032C077 /* NSView+DrawString.m */,
 			);
@@ -181,8 +189,8 @@
 				3D1F8FF71FF21F5700930AAD /* AppDelegate.h */,
 				3D1F8FF81FF21F5700930AAD /* AppDelegate.m */,
 				3D1F90001FF21F5700930AAD /* main.m */,
-				3DF6DD7E2061EA0F002CE8D9 /* Manager */,
-				3DF6DD7D2061E9FE002CE8D9 /* Controller */,
+				3DF6DD7E2061EA0F002CE8D9 /* Model */,
+				3DF6DD7D2061E9FE002CE8D9 /* ViewController */,
 				3DF6DD7C2061E9F1002CE8D9 /* View */,
 				3DF6DD7F2061EA2C002CE8D9 /* Define */,
 				3D7560FC20628D610032C077 /* Utility */,
@@ -194,10 +202,11 @@
 			isa = PBXGroup;
 			children = (
 				3DF157352021EF9B0086BD82 /* MainMenu.xib */,
-				3DF157302021C2940086BD82 /* Preferences.xib */,
+				3D96800B2090142B004BCEC8 /* Preferences.xib */,
 				3D1F8FFA1FF21F5700930AAD /* Assets.xcassets */,
 				3D1F8FFF1FF21F5700930AAD /* Info.plist */,
 				3DF6DD802061EADE002CE8D9 /* Movse-Prefix.pch */,
+				3D96801B2092BBA4004BCEC8 /* Localizable.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -215,7 +224,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		3DF6DD7D2061E9FE002CE8D9 /* Controller */ = {
+		3DF6DD7D2061E9FE002CE8D9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				3DF1572D2021BAAF0086BD82 /* PreferenceController.h */,
@@ -223,18 +232,16 @@
 				3DF1572520216CFB0086BD82 /* StatusBarController.h */,
 				3DF1572620216CFB0086BD82 /* StatusBarController.m */,
 			);
-			path = Controller;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
-		3DF6DD7E2061EA0F002CE8D9 /* Manager */ = {
+		3DF6DD7E2061EA0F002CE8D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				3D59CF7820413FA100BBE102 /* MVSDisplayState.h */,
 				3D59CF7920413FA100BBE102 /* MVSDisplayState.m */,
-				3DF6DD872062709E002CE8D9 /* MVSCenter.h */,
-				3DF6DD882062709E002CE8D9 /* MVSCenter.m */,
 			);
-			path = Manager;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3DF6DD7F2061EA2C002CE8D9 /* Define */ = {
@@ -345,7 +352,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DF157312021C2940086BD82 /* Preferences.xib in Resources */,
+				3D9680192092BBA4004BCEC8 /* Localizable.strings in Resources */,
+				3D9680092090142B004BCEC8 /* Preferences.xib in Resources */,
 				3D1F8FFB1FF21F5700930AAD /* Assets.xcassets in Resources */,
 				3D7561012064DAF30032C077 /* LICENSE in Resources */,
 				3DF157372021EF9B0086BD82 /* MainMenu.xib in Resources */,
@@ -429,7 +437,7 @@
 				3DF1572F2021BAAF0086BD82 /* PreferenceController.m in Sources */,
 				3D977D27202403E00001E0BF /* DisplayArrangementView.m in Sources */,
 				3D59CF7A20413FA100BBE102 /* MVSDisplayState.m in Sources */,
-				3DF6DD892062709E002CE8D9 /* MVSCenter.m in Sources */,
+				3DF6DD892062709E002CE8D9 /* MVSMouseManager.m in Sources */,
 				3DF1572720216CFB0086BD82 /* StatusBarController.m in Sources */,
 				3D1F90011FF21F5700930AAD /* main.m in Sources */,
 				3D1F8FF91FF21F5700930AAD /* AppDelegate.m in Sources */,
@@ -455,14 +463,34 @@
 			isa = PBXVariantGroup;
 			children = (
 				3D6029C0208E15930099C924 /* Base */,
+				3D96800E20901491004BCEC8 /* zh-Hans */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		3D96800B2090142B004BCEC8 /* Preferences.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D96800A2090142B004BCEC8 /* Base */,
+				3D96800D20901491004BCEC8 /* zh-Hans */,
+			);
+			name = Preferences.xib;
+			sourceTree = "<group>";
+		};
+		3D96801B2092BBA4004BCEC8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D96801A2092BBA4004BCEC8 /* zh-Hans */,
+				3D96801C2092BBAF004BCEC8 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		3DF157352021EF9B0086BD82 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3DF157362021EF9B0086BD82 /* Base */,
+				3D96800C20901491004BCEC8 /* zh-Hans */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -474,6 +502,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -532,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
